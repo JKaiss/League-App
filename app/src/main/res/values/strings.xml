@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">LeagueApp</string>
     <string name="error_message">Empty response</string>
+    <string name="hint_search">Entrer votre nom de league</string>
 </resources>
