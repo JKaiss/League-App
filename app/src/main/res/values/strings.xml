@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">LeagueApp</string>
+    <string name="error_message">Empty response</string>
+</resources>
