@@ -4,7 +4,13 @@ build_apk: &build_apk
   run:
     name: Build apk || ./gradlew assembleDebug
     command: ./gradlew clean assembleDebug --no-daemon --stacktrace
-    
+
+
+    build_apk: &gradlew
+      run:
+        name: upgrade gradlew
+        command: chmod +x gradlew
+
 jobs:
   build:
     working_directory: ~/LeagueApp
@@ -25,6 +31,8 @@ jobs:
         destination: reports
     - store_test_results: # for display in Test Summary: https://circleci.com/docs/2.0/collect-test-data/
         path: app/build/test-results
+
+    - *gradlew
     - *build_apk
     - store_artifacts:
         path: app/build/outputs/apk/development
