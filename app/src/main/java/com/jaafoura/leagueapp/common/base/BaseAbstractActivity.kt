@@ -46,9 +46,4 @@ abstract class BaseAbstractActivity<D : ViewDataBinding, P : BasePresenter<BaseV
         return this
     }
 
-    fun goForward(strLeague: String) {
-        val intent = Intent(this@BaseAbstractActivity, PlayerActivity::class.java)
-        intent.putExtra("strLeague", strLeague)
-        startActivity(intent)
-    }
 }

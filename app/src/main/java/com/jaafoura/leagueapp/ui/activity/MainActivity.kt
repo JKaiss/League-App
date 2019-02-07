@@ -1,5 +1,6 @@
 package com.jaafoura.leagueapp.ui.activity
 
+import android.content.Intent
 import android.support.v7.widget.LinearLayoutManager
 import android.view.View
 import android.view.View.GONE
@@ -114,6 +115,10 @@ class MainActivity : BaseAbstractActivity<ActivityMainBinding, TeamPresenter>(),
     }
 
     //endregion
-
+    private fun goForward(strLeague: String) {
+        val intent = Intent(this, PlayerActivity::class.java)
+        intent.putExtra("strLeague", strLeague)
+        startActivity(intent)
+    }
 
 }
