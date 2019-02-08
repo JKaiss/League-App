@@ -13,7 +13,6 @@ build_apk: &build_apk
 
 jobs:
   build:
-    working_directory: ~/JKaiss/League-App
     docker:
     - image: circleci/android:api-25-alpha
     environment:
