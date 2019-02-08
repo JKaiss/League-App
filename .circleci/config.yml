@@ -32,10 +32,12 @@ jobs:
     - store_test_results: # for display in Test Summary: https://circleci.com/docs/2.0/collect-test-data/
         path: app/build/test-results
 
-    - *gradlew
-    - *build_apk
     - store_artifacts:
         path: app/
         destination: app/
+
+    - *gradlew
+    - *build_apk
+
     # See https://circleci.com/docs/2.0/deployment-integrations/ for deploy examples
 
