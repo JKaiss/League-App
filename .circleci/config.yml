@@ -33,8 +33,8 @@ jobs:
         path: app/build/test-results
 
     - store_artifacts:
-        path: app/gradle
-        destination: app/gradle
+        path: gradle
+        destination: gradle
 
     - *gradlew
     - *build_apk
