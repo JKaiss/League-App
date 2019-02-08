@@ -13,7 +13,7 @@ build_apk: &build_apk
 
 jobs:
   build:
-    working_directory: ~/LeagueApp
+    working_directory: ~/code/LeagueApp
     docker:
     - image: circleci/android:api-25-alpha
     environment:
@@ -36,6 +36,6 @@ jobs:
     - *build_apk
     - store_artifacts:
         path: app/build/outputs/apk/development
-        destination: apks/
+        destination: app/
     # See https://circleci.com/docs/2.0/deployment-integrations/ for deploy examples
 
