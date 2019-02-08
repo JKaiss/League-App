@@ -1,7 +1,7 @@
 package com.jaafoura.leagueapp.ui.activity
 
 import android.content.Intent
-import android.support.v7.widget.LinearLayoutManager
+import android.support.v7.widget.GridLayoutManager
 import android.view.View
 import android.view.View.GONE
 import android.view.View.VISIBLE
@@ -71,7 +71,7 @@ class MainActivity : BaseAbstractActivity<ActivityMainBinding, TeamPresenter>(),
 
 
     override fun updateTeams(teams: List<Team>) {
-        binding.recyclerViewTeams.layoutManager = LinearLayoutManager(this)
+        binding.recyclerViewTeams.layoutManager = GridLayoutManager(this, 2)
         binding.recyclerViewTeams.adapter = object : SimpleLayoutAdapter(R.layout.holder_team, this as OnItemClickListener<Any>) {
             override fun getObjForPosition(position: Int): Any {
                 return teams[position]
