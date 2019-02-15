@@ -1,6 +1,6 @@
 package com.jaafoura.leagueapp.ui.activity
 
-import android.support.v7.widget.LinearLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import android.util.Log
 import android.view.View.GONE
 import android.view.View.VISIBLE
@@ -19,7 +19,7 @@ class PlayerActivity : BaseAbstractActivity<ActivityPlayerBinding, PlayerPresent
     }
 
     override fun updatePlayer(players: List<Player>) {
-        binding.recyclerViewPlayers.layoutManager = LinearLayoutManager(this)
+        binding.recyclerViewPlayers.layoutManager = androidx.recyclerview.widget.LinearLayoutManager(this)
         binding.recyclerViewPlayers.adapter = object : SimpleLayoutAdapter(R.layout.holder_player, this as OnItemClickListener<Any>) {
             override fun getObjForPosition(position: Int): Any {
                 return players[position]

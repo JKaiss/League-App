@@ -2,10 +2,10 @@ package com.jaafoura.leagueapp.common.base
 
 import android.content.Context
 import android.content.Intent
-import android.databinding.DataBindingUtil
-import android.databinding.ViewDataBinding
+import androidx.databinding.DataBindingUtil
+import androidx.databinding.ViewDataBinding
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import com.jaafoura.leagueapp.ui.activity.PlayerActivity
 
 abstract class BaseAbstractActivity<D : ViewDataBinding, P : BasePresenter<BaseView>> : BaseView, AppCompatActivity() {

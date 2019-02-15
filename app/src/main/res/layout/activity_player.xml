@@ -5,7 +5,7 @@
     android:animateLayoutChanges="true"
     tools:context=".ui.activity.MainActivity">
 
-    <android.support.constraint.ConstraintLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -34,7 +34,7 @@
             app:layout_constraintTop_toTopOf="parent"
             tools:text="Hello" />
 
-        <android.support.v7.widget.RecyclerView
+        <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler_view_players"
             android:layout_width="match_parent"
             android:layout_height="0dp"
@@ -49,5 +49,5 @@
             app:layout_constraintTop_toBottomOf="@+id/progress_circular" />
 
 
-    </android.support.constraint.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

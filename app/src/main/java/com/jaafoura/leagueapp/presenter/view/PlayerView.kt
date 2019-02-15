@@ -1,6 +1,6 @@
 package com.jaafoura.leagueapp.presenter.view
 
-import android.support.annotation.StringRes
+import androidx.annotation.StringRes
 import com.jaafoura.leagueapp.common.base.BaseView
 import com.jaafoura.leagueapp.data.model.League
 import com.jaafoura.leagueapp.data.model.Player
