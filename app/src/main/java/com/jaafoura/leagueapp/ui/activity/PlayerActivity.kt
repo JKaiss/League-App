@@ -40,15 +40,19 @@ class PlayerActivity : BaseAbstractActivity<ActivityPlayerBinding, PlayerPresent
     override fun showError(error: String) {
         binding.tvError.visibility = VISIBLE
         binding.tvError.text = getString(R.string.error_message)
+        binding.recyclerViewPlayers.visibility = GONE
     }
 
     override fun showLoading() {
         binding.progressCircular.visibility = VISIBLE
         binding.tvError.visibility = GONE
+        binding.recyclerViewPlayers.visibility = GONE
+
     }
 
     override fun hideLoading() {
         binding.progressCircular.visibility = GONE
+        binding.recyclerViewPlayers.visibility = VISIBLE
     }
 
     //endregion

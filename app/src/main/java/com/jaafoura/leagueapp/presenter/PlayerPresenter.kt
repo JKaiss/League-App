@@ -15,19 +15,16 @@ import javax.inject.Inject
  * @param playerView the Player view to be presented by the presenter
  * @property GlobalApi the API interface implementation
  */
-class PlayerPresenter(playerView: PlayerView) : BasePresenter<PlayerView>(playerView) {
+class PlayerPresenter(playerView: PlayerView) : BasePresenter<PlayerView>(playerView), IPlayerPresenter {
 
     @Inject
     lateinit var globalApi: GlobalApi
-
-    override fun onViewCreated() {
-    }
 
     /**
      * Loads the player from the API and presents them in the view when retrieved, or showss error if
      * any.
      */
-    fun loadPlayers(value: String) {
+    override fun loadPlayers(value: String) {
         view.showLoading()
         GlobalScope.launch(Dispatchers.Main) {
             val request = globalApi.getPlayersAsync(value)
@@ -45,5 +42,8 @@ class PlayerPresenter(playerView: PlayerView) : BasePresenter<PlayerView>(player
                 view.hideLoading()
             }
         }
+    }
+
+    override fun onViewCreated() {
     }
 }

@@ -24,7 +24,7 @@ abstract class SimpleBaseAdapter<T> internal constructor(private val itemClickLi
     override fun onBindViewHolder(holder: SimpleViewHolder,
                                   position: Int) {
         val obj = getObjForPosition(position)
-        holder.itemView.setOnClickListener { itemClickListener!!.onItemClick(obj) }
+        holder.itemView.setOnClickListener { itemClickListener.onItemClick(obj) }
         holder.bind(obj as Any)
     }
 

@@ -90,15 +90,18 @@ class MainActivity : BaseAbstractActivity<ActivityMainBinding, TeamPresenter>(),
     override fun showError(error: String) {
         binding.tvError.visibility = VISIBLE
         binding.tvError.text = getString(R.string.error_message)
+        binding.recyclerViewTeams.visibility = GONE
     }
 
     override fun showLoading() {
         binding.progressCircular.visibility = VISIBLE
         binding.tvError.visibility = GONE
+        binding.recyclerViewTeams.visibility = GONE
     }
 
     override fun hideLoading() {
         binding.progressCircular.visibility = GONE
+        binding.recyclerViewTeams.visibility = VISIBLE
     }
 
     //endregion
